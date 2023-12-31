@@ -39,6 +39,20 @@ import java.util.Collection;
  * If RegularEnumSet ceased to offer performance advantages for small enum types, 
  * it could be eliminated from a future release with no ill effects. 
  * Similarly, a future release could add a third or fourth implementation of EnumSet if it proved beneficial
+ * 
+ * A fifth advantage of static factories is that 
+ * the class of the returned object need not exist when the class containing the method is written.
+ * 
+ * The main limitation of providing only static factory methods is that 
+ * classes without public or protected constructors cannot be subclassed.
+ * Arguably this can be a blessing in disguise because it encourages programmers to use composition instead of inheritance (Item 18), 
+ * and is required for immutable types (Item 17).
+ * 
+ * A second shortcoming of static factory methods is that they are hard for programmers to find. 
+ * 
+ * In summary, static factory methods and public constructors both have their uses, 
+ * and it pays to understand their relative merits. Often static factories are preferable, 
+ * so avoid the reflex to provide public constructors without first considering static factories.
  */
 public class StaticFactoryMethod extends SuperType implements Interface1 {
 
