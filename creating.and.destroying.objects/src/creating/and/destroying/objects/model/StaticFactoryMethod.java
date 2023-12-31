@@ -1,7 +1,4 @@
 package creating.and.destroying.objects.model;
-
-import java.util.Collection;
-
 /*
  * Item 1: Consider static factory methods instead of constructors
  * a static method that returns an instance of the class
