@@ -61,7 +61,7 @@ public class StaticFactoryMethod extends SuperType implements Interface1 {
 	private StaticFactoryMethod() {
 	}
 
-	public static StaticFactoryMethod of() {
+	public static StaticFactoryMethod createInstance() {
 
 		if (staticFactoryMethod != null) {
 			staticFactoryMethod = new StaticFactoryMethod();

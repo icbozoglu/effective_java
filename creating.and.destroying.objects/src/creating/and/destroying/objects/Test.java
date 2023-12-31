@@ -12,7 +12,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		StaticFactoryMethod method1 = StaticFactoryMethod.of();
+		StaticFactoryMethod method1 = StaticFactoryMethod.createInstance();
 		Interface1 method2 = StaticFactoryMethod.ofInterface();
 		SuperType method3 = StaticFactoryMethod.ofSuperType();
 		SuperType method4 = StaticFactoryMethod.ofSuperType(false);
