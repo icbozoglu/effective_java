@@ -9,7 +9,6 @@ public class Test {
 	public static void main(String[] args) {
 		
 		Person person = new Person.Builder("Ali","Veli",true).birthDate(LocalDate.now()).build();
-		
 		System.out.println(person);
 
 	}
