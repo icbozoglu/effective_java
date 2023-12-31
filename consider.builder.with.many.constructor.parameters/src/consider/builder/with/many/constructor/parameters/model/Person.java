@@ -22,8 +22,6 @@ package consider.builder.with.many.constructor.parameters.model;
 
 import java.time.LocalDate;
 
-import jdk.jshell.JShell.Builder;
-
 public class Person {
 
 	private final long id;
