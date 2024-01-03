@@ -15,6 +15,15 @@
  * then call setter methods to set each required parameter and each optional parameter of interest:
  * This pattern has none of the disadvantages of the telescoping constructor pattern. It is easy, if a bit wordy, 
  * to create instances, and easy to read
+ * This client code is easy to write and, more importantly, easy to read. 
+ * The Builder pattern simulates named optional parameters as found in Python and Scala.
+ * 
+ * Validity checks were omitted for brevity. To detect invalid parameters as soon as possible, 
+ * check parameter validity in the builder’s constructor and methods. 
+ * Check invariants involving multiple parameters in the constructor invoked by the build method. 
+ * To ensure these invariants against attack, do the checks on object fields after copying parameters 
+ * from the builder (Item 50). If a check fails, throw an IllegalArgumentException (Item 72) 
+ * whose detail message indicates which parameters are invalid (Item 75).
  * 
  */
 
@@ -76,6 +85,9 @@ public class Person {
 		}
 
 		public Builder birthDate(LocalDate birthDate) {
+			if(birthDate == null ||birthDate.getYear()-LocalDate.now().getYear() < 18)
+				throw new IllegalArgumentException("The age cannot be under 18!");
+			
 			this.birthDate = birthDate;
 			return this;
 		}
