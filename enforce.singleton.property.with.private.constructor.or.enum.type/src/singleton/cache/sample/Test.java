@@ -1,3 +1,8 @@
+/*
+ * a single-element enum type is often the best way to implement a singleton. 
+ * Note that you can’t use this approach if your singleton must extend a superclass 
+ * other than Enum (though you can declare an enum to implement interfaces).
+ */
 package singleton.cache.sample;
 
 import singleton.cache.sample.model.*;
